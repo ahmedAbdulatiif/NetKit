@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>BaseDomain</key>
+	<string>$(BASE_DOMAIN)</string>
+	<key>BaseRestDomain</key>
+	<string>$(BASE_REST_DOMAIN)</string>
+	<key>PageSize</key>
+	<string>$(PAGE_SIZE)</string>
+	<key>Port</key>
+	<string>$(PORT)</string>
+	<key>TimeoutInterval</key>
+	<string>$(TIMEOUT_INTERVAL)</string>
+	<key>URLProtocol</key>
+	<string>$(PROTOCOL)</string>
+</dict>
+</plist>
