@@ -63,7 +63,7 @@ open class BaseAPIRequest: APIRequestProtocol {
     }
     
     public init() {
-        portNumber = Environment().configuration(.port).integerValue
+        portNumber = Environment().optionalConfiguration(.port)?.integerValue
         scheme = "\(Environment().configuration(.urlProtocol))"
         baseDomain = "\(Environment().configuration(.baseRestDomain))"
         authorization = .none

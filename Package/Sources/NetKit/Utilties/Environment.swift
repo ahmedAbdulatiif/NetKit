@@ -32,6 +32,10 @@ public struct Environment {
         return keyValue
     }
     
+    public func optionalConfiguration(_ key: PlistKey) -> NSString? {
+        infoDict[key.value()] as? NSString
+    }
+    
     public func getBaseURL() -> String {
         let `protocol` = configuration(.urlProtocol)
         let domain = configuration(.baseRestDomain)
