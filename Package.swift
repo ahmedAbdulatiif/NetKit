@@ -26,9 +26,13 @@ let package = Package(
             dependencies: [
                 .product(name: "Promises", package: "promises"),
                 "Alamofire"
-            ]),
+            ],
+            path: "Package/Sources" // Specify the path to your source files
+        ),
         .testTarget(
             name: "NetKitTests",
-            dependencies: ["NetKit"]),
+            dependencies: ["NetKit"],
+            path: "Package/Tests" // Specify the path to your test files
+        ),
     ]
 )
