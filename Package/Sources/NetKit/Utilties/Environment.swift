@@ -35,8 +35,8 @@ public struct Environment {
     public func getBaseURL() -> String {
         let `protocol` = configuration(.urlProtocol)
         let domain = configuration(.baseRestDomain)
-        let port = Int(configuration(.port) as String) ?? 0
+        let port = optionalConfiguration(.port) as? String
         let baseUrl = "\(`protocol`)://\(domain)"
-        return port == 0 ? baseUrl.appending("/") : baseUrl.appending(":\(port)/")
+        return port == nil ? baseUrl.appending("/") : baseUrl.appending(":\(port!)/")
     }
 }
