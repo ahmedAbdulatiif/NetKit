@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D22BC722C89D14500642451 /* NetKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D22BC712C89D14500642451 /* NetKit */; };
+		4D22BC752C89D1A600642451 /* NetKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4D22BC742C89D1A600642451 /* NetKit */; };
 		4D5981622C726CBA0012BDD1 /* HomeServicesMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5981532C726CBA0012BDD1 /* HomeServicesMapper.swift */; };
 		4D5981632C726CBA0012BDD1 /* HomeServicesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5981552C726CBA0012BDD1 /* HomeServicesRequest.swift */; };
 		4D5981642C726CBA0012BDD1 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D5981582C726CBA0012BDD1 /* Service.swift */; };
@@ -59,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D22BC722C89D14500642451 /* NetKit in Frameworks */,
+				4D22BC752C89D1A600642451 /* NetKit in Frameworks */,
 				4DB2FF362C68DB7E00F3203C /* NetKit in Frameworks */,
 				4D5981712C7278250012BDD1 /* NetKit in Frameworks */,
 				4D59816E2C7276F60012BDD1 /* NetKit in Frameworks */,
@@ -244,6 +248,8 @@
 				4D59816A2C72758A0012BDD1 /* NetKit */,
 				4D59816D2C7276F60012BDD1 /* NetKit */,
 				4D5981702C7278250012BDD1 /* NetKit */,
+				4D22BC712C89D14500642451 /* NetKit */,
+				4D22BC742C89D1A600642451 /* NetKit */,
 			);
 			productName = Example;
 			productReference = 4DBCA3682C68D6E300EA0026 /* Example.app */;
@@ -275,7 +281,7 @@
 			);
 			mainGroup = 4DBCA35F2C68D6E300EA0026;
 			packageReferences = (
-				4D59816F2C7278250012BDD1 /* XCLocalSwiftPackageReference "../Package" */,
+				4D22BC732C89D1A600642451 /* XCLocalSwiftPackageReference ".." */,
 			);
 			productRefGroup = 4DBCA3692C68D6E300EA0026 /* Products */;
 			projectDirPath = "";
@@ -532,13 +538,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		4D59816F2C7278250012BDD1 /* XCLocalSwiftPackageReference "../Package" */ = {
+		4D22BC732C89D1A600642451 /* XCLocalSwiftPackageReference ".." */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../Package;
+			relativePath = ..;
 		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4D22BC712C89D14500642451 /* NetKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetKit;
+		};
+		4D22BC742C89D1A600642451 /* NetKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetKit;
+		};
 		4D59816A2C72758A0012BDD1 /* NetKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = NetKit;

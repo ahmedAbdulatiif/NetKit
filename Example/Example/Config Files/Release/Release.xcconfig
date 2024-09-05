@@ -12,7 +12,6 @@ OTHER_SWIFT_FLAGS =  -DRELEASE
 SWIFT_ACTIVE_COMPILATION_CONDITIONS = RELEASE
 
 PROTOCOL                = https
-PORT                    = 443
 BASE_DOMAIN             = robusta.hypernode.io
 BASE_REST_DOMAIN        = fe.elaraby.ecommbeta.com
 TIMEOUT_INTERVAL        = 10

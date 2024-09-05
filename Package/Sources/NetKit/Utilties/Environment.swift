@@ -17,23 +17,19 @@ public struct Environment {
         return false
     }
     
-    private var infoDict: [String: Any] {
-        if let dict = Bundle.main.infoDictionary {
-            return dict
-        } else {
-            fatalError("Plist file not found")
-        }
+    private var infoDict: [String: Any]? {
+        Bundle.main.infoDictionary
     }
     
     public func configuration(_ key: PlistKey) -> NSString {
-        guard let keyValue = infoDict[key.value()] as? NSString else {
+        guard let keyValue = infoDict?[key.value()] as? NSString else {
             fatalError("Key \(key.value()) Not founded")
         }
         return keyValue
     }
     
     public func optionalConfiguration(_ key: PlistKey) -> NSString? {
-        infoDict[key.value()] as? NSString
+        infoDict?[key.value()] as? NSString
     }
     
     public func getBaseURL() -> String {

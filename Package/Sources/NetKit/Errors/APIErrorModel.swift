@@ -8,36 +8,35 @@
 
 import Foundation
 
-struct APIErrorModel: APIErrorModelProtocol {
+public struct APIErrorModel: APIErrorModelProtocol {
 
-    var code: Int? {
+    public var code: Int? {
         return mCode
     }
 
-    var errorDetail: String? {
+    public var errorDetail: String? {
         return mErrorDetail
     }
 
-    var errorType: String? {
+    public var errorType: String? {
         return mErrorType
     }
 
-    let mCode: Int?
-    let mErrorDetail: String?
-    let mErrorType: String?
+    private let mCode: Int?
+    private let mErrorDetail: String?
+    private let mErrorType: String?
 
-    init(code: Int, errorDetail: String) {
+    public init(code: Int, errorDetail: String) {
         self.mCode = code
         self.mErrorDetail  = errorDetail
         self.mErrorType = ""
-
     }
 }
-protocol APIErrorModelProtocol: Codable {
 
-    var code: Int? {get }
-    var errorDetail: String? {get}
-    var errorType: String? {get}
+public protocol APIErrorModelProtocol: Codable {
+    var code: Int? { get }
+    var errorDetail: String? { get }
+    var errorType: String? { get }
 
     init(code: Int, errorDetail: String)
 }

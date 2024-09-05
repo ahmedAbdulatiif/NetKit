@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum APIManagerError: Error {
+public enum APIManagerError: Error {
     case requestFailed(message: String)
     case errorModel(errorModel: APIErrorModel)
     case noInternet(message: String)
@@ -16,7 +16,7 @@ enum APIManagerError: Error {
     case decodingFailed
     case unknown
 
-    var message: String {
+    public var message: String {
         switch self {
         case .requestFailed(let message):
             return message
