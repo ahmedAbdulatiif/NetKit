@@ -65,7 +65,7 @@ open class BaseAPIRequest: APIRequestProtocol {
     public init() {
         portNumber = Environment().optionalConfiguration(.port)?.integerValue
         scheme = "\(Environment().configuration(.urlProtocol))"
-        baseDomain = "\(Environment().configuration(.baseRestDomain))"
+        baseDomain = "\(Environment().configuration(.baseDomain))"
         authorization = .none
         headers = ["Content-Type": "application/json"]
         path = ""

@@ -10,6 +10,8 @@ import Promises
 
 
 open class BaseGraphQLMapper<T> {
+    public init() {}
+    
     open func parse(_ data: Data) throws -> T {
         fatalError("You must implement this function in the subclass")
     }

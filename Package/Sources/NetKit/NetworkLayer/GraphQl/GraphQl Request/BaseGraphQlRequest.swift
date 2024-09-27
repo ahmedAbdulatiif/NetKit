@@ -65,7 +65,7 @@ open class BaseGraphQlRequest: APIRequestProtocol, GraphQLOperation {
     }
 
     public init() {
-        portNumber = Environment().configuration(.port).integerValue
+        portNumber = Environment().optionalConfiguration(.port)?.integerValue
         scheme = "\(Environment().configuration(.urlProtocol))"
         baseDomain = "\(Environment().configuration(.baseDomain))"
         authorization = .none
@@ -83,18 +83,18 @@ open class BaseGraphQlRequest: APIRequestProtocol, GraphQLOperation {
         operationName
     }
 
-    public var operationTypeRowValue: String {
+    open var operationTypeRowValue: String {
         ""
     }
     public var operationType: GraphQLOperationType {
         GraphQLOperationType(rawValue: operationTypeRowValue) ?? .query
     }
 
-    public var operationName: String {
+    open var operationName: String {
         ""
     }
 
-    public var operationDocument: String {
+    open var operationDocument: String {
         ""
     }
 

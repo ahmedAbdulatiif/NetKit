@@ -11,7 +11,6 @@ import Foundation
 public enum PlistKey {
 
     case baseDomain
-    case baseRestDomain
     case timeoutInterval
     case urlProtocol
     case port
@@ -21,7 +20,6 @@ public enum PlistKey {
     func value() -> String {
         switch self {
         case .baseDomain: return "BaseDomain"
-        case .baseRestDomain: return "BaseRestDomain"
         case .timeoutInterval: return "TimeoutInterval"
         case .urlProtocol: return "URLProtocol"
         case .port: return "Port"
