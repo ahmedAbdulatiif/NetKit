@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Promises
 
 open class BaseUseCase {
     

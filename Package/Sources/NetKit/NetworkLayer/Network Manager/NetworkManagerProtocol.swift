@@ -7,9 +7,7 @@
 //
 
 import Foundation
-import Promises
 
 protocol NetworkManagerProtocol: AnyObject {
-    func perform(apiRequest: APIRequestProtocol, provider: APIRequestProviderProtocol) -> Promise<Data>
     func perform(apiRequest: APIRequestProtocol, provider: APIRequestProviderProtocol) async throws -> Data
 }

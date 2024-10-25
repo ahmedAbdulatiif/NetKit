@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import Promises
 
 public extension Error {
     var message: String {
@@ -43,9 +42,5 @@ extension NSError {
                 code: 5005,
                 userInfo: nil)
 
-    }
-    
-    static func asPromise<T>() -> Promise<T> {
-        return Promise(NSError.apiFailureError)
     }
 }
